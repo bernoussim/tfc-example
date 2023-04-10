@@ -1,5 +1,5 @@
 provider "tfe" {
-  hostname = var.tfc_hostname
+  hostname = "mehdiber"
 }
 
 data "tfe_workspace" "dev_ws1" {
