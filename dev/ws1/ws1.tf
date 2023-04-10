@@ -1,7 +1,7 @@
 resource "tfe_workspace" "dev_ws1" {
   name             = "dev-ws1"
   organization     = "mehdiber"
-  trigger_patterns = "/dev/ws1/*.tf"
+  trigger_patterns = ["/dev/ws1/*.tf"]
   vcs_repo {
     identifier                 = "bernoussim/tfc-example"
     branch                     = "master"
