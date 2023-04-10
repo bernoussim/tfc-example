@@ -11,6 +11,7 @@ data "aws_caller_identity" "current" {}
 
 module "tfc_workspace" {
   source = "./ws1"
+  vpc_id = var.vpc_id
 }
 
 resource "aws_s3_bucket" "b" {
