@@ -1,3 +1,3 @@
 output "vpc_id" {
-  value = tfe_variable.vpc_name.value
+  value = var.vpc_id
 }
