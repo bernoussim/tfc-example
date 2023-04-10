@@ -1,3 +1,7 @@
+provider "tfe" {
+  hostname = var.tfc_hostname
+}
+
 data "tfe_workspace" "dev_ws1" {
   name         = "dev-ws1"
   organization = "mehdiber"
