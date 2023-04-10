@@ -22,7 +22,7 @@ resource "tfe_variable" "region" {
   value        = "us-east-1"
   category     = "env"
   description  = "aws region"
-  workspace_id = tfe_workspace.my_workspace.id
+  workspace_id = tfe_workspace.dev_ws1.id
 }
 
 resource "tfe_variable" "enable_aws_provider_auth" {
