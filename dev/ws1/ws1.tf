@@ -1,3 +1,7 @@
+provider "tfe" {
+  hostname = "app.terraform.io"
+}
+
 data "tfe_workspace" "dev_ws1" {
   name         = "dev-ws1"
   organization = "mehdiber"
