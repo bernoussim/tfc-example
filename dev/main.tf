@@ -10,7 +10,7 @@ terraform {
 data "aws_caller_identity" "current" {}
 
 module "tfc_workspace" {
-  source = "./dev/ws1"
+  source = "./ws1"
 }
 
 resource "aws_s3_bucket" "b" {
