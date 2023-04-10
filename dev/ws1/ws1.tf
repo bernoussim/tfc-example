@@ -1,6 +1,6 @@
 provider "tfe" {
   hostname = "app.terraform.io"
-  token    = "Cl9OSvegbn2Rzg.atlasv1.yrUTyWIUyxIgTEpOZY0X8FIzTxCJL8HWdZB4DpabP4SXANdCxSprH86QNqWhOacJYEU"
+  token    = var.token
 }
 
 data "tfe_workspace" "dev_ws1" {
