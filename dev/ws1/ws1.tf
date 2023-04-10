@@ -1,5 +1,5 @@
 provider "tfe" {
-  hostname = "mehdiber"
+  hostname = "app.terraform.io"
 }
 
 data "tfe_workspace" "dev_ws1" {
