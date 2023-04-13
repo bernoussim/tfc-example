@@ -9,19 +9,7 @@ terraform {
 
 data "aws_caller_identity" "current" {}
 
-module "tfc_workspace" {
-  source = "./ws1"
-  token  = var.token
-}
-
-resource "aws_s3_bucket" "b" {
-  bucket = "tf-test-bucket-${data.aws_caller_identity.current.account_id}-${module.tfc_workspace.vpc_id}"
-}
-
-data "aws_secretsmanager_secret" "timestream" {
-  name = "timestream"
-}
-
-data "aws_secretsmanager_secret_version" "timestream_version" {
-  secret_id = data.aws_secretsmanager_secret.timestream.id
+resource "aws_instance" "this" {
+  ami           = var.ami_version
+  instance_type = var.instance_type
 }
