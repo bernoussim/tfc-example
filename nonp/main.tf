@@ -1,12 +1,3 @@
-# terraform {
-#   backend "remote" {
-#     organization = "mehdiber"
-#     workspaces {
-#       prefix = "nonp-"
-#     }
-#   }
-# }
-
 data "aws_caller_identity" "current" {}
 
 resource "aws_instance" "this" {

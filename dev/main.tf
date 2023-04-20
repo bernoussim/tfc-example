@@ -1,12 +1,3 @@
-terraform {
-  backend "remote" {
-    organization = "mehdiber"
-    workspaces {
-      prefix = "dev-"
-    }
-  }
-}
-
 data "aws_caller_identity" "current" {}
 
 module "tfc_workspace" {
